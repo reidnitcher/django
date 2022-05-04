@@ -8,9 +8,10 @@
 
 <form action="{% url 'users:login' %}" method="post">
     {% csrf_token %} 
-    {{ form as.p}}
+    {{form.as_p}}
 
     <button name="submit"> Log in</button>
     <input type="hidden" name="text"
     value="{% url 'MainApp:index' %}" />
+    </form>
 {% endblock content %} 
